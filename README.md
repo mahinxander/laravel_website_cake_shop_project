@@ -33,3 +33,7 @@ Thank you for considering contributing to the Laravel- Cake Shop Project!
 ## License
 
 The Sweet Piece- A Laravel Cake Shop Website Project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Demo Screenshots
+
+<img src="/images-of-the-sweet-piece-site/thesweetpiece.PNG" alt="laravel cake shop" />
