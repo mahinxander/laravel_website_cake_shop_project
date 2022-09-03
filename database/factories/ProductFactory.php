@@ -1,0 +1,40 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Category;
+use App\Models\Product;
+use Exception;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
+class ProductFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Product::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     * @throws Exception
+     */
+    public function definition():array
+    {
+        $product=$this->faker->name;
+        return [
+            //
+            'title'=>$product,
+            'slug'=>Str::slug($product),
+            'description'=>$this->faker->lexify('????????? ????????? ??????????? ?????? ??????? ????????? ?????????? ????????? ????? ????? ??????? ????? ??????? ?????? ??????'),
+            'price'=>$this->faker->numerify('####'),
+            'sale_price'=>random_int(0,1000),
+            "category_id" => Category::all()->random()->id,
+            'image_prod' => 'https://source.unsplash.com/random'
+        ];
+    }
+}
