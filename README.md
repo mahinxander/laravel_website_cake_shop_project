@@ -1,5 +1,5 @@
 <head>
-    <title>Laravel Cake Shop Website Project - The Sweet Piece</title>
+    <meta name='keywords' content='php, laravel, cake, shop'>
 </head>
 
 ## <span style='color:red;'>Laravel</span> Cake Shop Website Project - <span style='color:pink;'>The Sweet Piece</span>
