@@ -11,7 +11,7 @@ The Sweet Piece - A Laravel Cake Shop Website Project is an open source ecommerc
 - Run `php -r "file_exists('.env') || copy('.env.example', '.env');"`
 - Run `php artisan key:generate --ansi`
 - Run `mysql -uroot`
-- Run create a database named `cakeshop` (or you can change the name in .env)
+- Create a database named `cakeshop` (or you can change the name in .env) in your localhost
 - Edit `.env` file
 - Run `php artisan migrate --seed`
 
