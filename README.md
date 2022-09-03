@@ -2,7 +2,7 @@
     <title>Laravel Cake Shop Website Project - The Sweet Piece</title>
 </head>
 
-## Laravel Cake Shop Website Project - The Sweet Piece
+## <span style='color:red;'>Laravel</span> Cake Shop Website Project - <span style='color:pink;'>The Sweet Piece</span>
 
 The Sweet Piece - A Laravel Cake Shop Website Project is an open source ecommerce/online shop platform management system using Laravel.
 
@@ -22,6 +22,10 @@ The Sweet Piece - A Laravel Cake Shop Website Project is an open source ecommerc
 ## Contributing
 
 Thank you for considering contributing to the Laravel- Cake Shop Project!
+**Issues**
+- More beautification is possible
+- Admin dashboard can be built properly
+- More options can be added.
 
 ## Contribution Guideline
 
