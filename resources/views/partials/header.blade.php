@@ -50,6 +50,30 @@
         display: block;
         font-weight: 700;
     }
+    @media only screen and (max-width: 500px) {
+        .header-primary {
+            font-size: 30px;
+            display: block;
+
+        }
+        .header-title {
+            font-size: 20px;
+        }
+        .hero-one {
+            width: 60%;
+            height: 50vh;
+        }
+        .hero-two {
+            width: 60%;
+            height: 50vh;
+        }
+        .hero {
+            width: 100vw;
+            height: 50vh;
+        }
+
+
+    }
 
 </style>
 
