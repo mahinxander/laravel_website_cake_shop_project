@@ -200,12 +200,20 @@ class ProductController extends Controller
                 ]);
 
                 if ($request->file('image_prods')) {
+
+                    foreach ($productimage as $productimg)
+                    {
+                        if( File::exists(public_path('/uploads/products/'.$productimg->pi_sub_image)) ) {
+                            File::delete(public_path('/uploads/products/'.$productimg->pi_sub_image));
+                        }
+                    }
+
                         $c= 0;
                     $photos = $request->file('image_prods');
                     foreach ($photos as $photo) {
                         $prodImgnamenew = Str::of($request->input('title'))->trim();
                         $filenew = $photo;
-                        $filenamenew = $prodImgnamenew.time().'.'.$filenew->getClientOriginalExtension();
+                        $filenamenew = $prodImgnamenew.time().$c.'.'.$filenew->getClientOriginalExtension();
                         $filenew->move(public_path('/uploads/products'), $filenamenew);
 
                         $productimage[$c]->update([
@@ -231,6 +239,30 @@ class ProductController extends Controller
                     'category_id'=>$request->input('category_id'),
                     'status' => $request->input('status')
                 ]);
+
+                if ($request->file('image_prods')) {
+
+                    foreach ($productimage as $productimg)
+                    {
+                        if( File::exists(public_path('/uploads/products/'.$productimg->pi_sub_image)) ) {
+                            File::delete(public_path('/uploads/products/'.$productimg->pi_sub_image));
+                        }
+                    }
+                    $c= 0;
+                    $photos = $request->file('image_prods');
+                    foreach ($photos as $photo) {
+                        $prodImgnamenew = Str::of($request->input('title'))->trim();
+                        $filenew = $photo;
+                        $filenamenew = $prodImgnamenew.time().$c.'.'.$filenew->getClientOriginalExtension();
+                        $filenew->move(public_path('/uploads/products'), $filenamenew);
+
+                        $productimage[$c]->update([
+                            'pi_sub_image' => $filenamenew
+                        ]);
+                        $c+=1;
+                    }
+                }
+
                 session()->flash('message', 'Submitted!');
                 session()->flash('type', 'success');
                 return redirect()->back();
