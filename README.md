@@ -1,8 +1,9 @@
 <head>
     <meta name='keywords' content='php, laravel, cake, shop'>
+<title><h1><span style='color:red;'>Laravel</span> Cake Shop Website Project - <span style='color:pink;'>The Sweet Piece</span></h1></title>
 </head>
 
-## <span style='color:red;'>Laravel</span> Cake Shop Website Project - <span style='color:pink;'>The Sweet Piece</span>
+[comment]: <> (## <span style='color:red;'>Laravel</span> Cake Shop Website Project - <span style='color:pink;'>The Sweet Piece</span>)
 
 The Sweet Piece - A Laravel Cake Shop Website Project is an open source ecommerce/online shop platform management system using Laravel.
 
@@ -14,7 +15,6 @@ The Sweet Piece - A Laravel Cake Shop Website Project is an open source ecommerc
 - Run `composer install`
 - Run `php -r "file_exists('.env') || copy('.env.example', '.env');"`
 - Run `php artisan key:generate --ansi`
-- Run `mysql -uroot`
 - Create a database named `cakeshop` (or you can change the name in .env) in your localhost
 - Edit `.env` file
 - Run `php artisan migrate --seed`
@@ -48,3 +48,4 @@ The Sweet Piece- A Laravel Cake Shop Website Project is open-sourced software li
 <img src="/images-of-the-sweet-piece-site/thesweetpiece-productpage.PNG" alt="laravel cake shop" />
 <img src="/images-of-the-sweet-piece-site/thesweetpiece-cart.PNG" alt="laravel cake shop" />
 <img src="/images-of-the-sweet-piece-site/thesweetpiece-orderhistory.PNG" alt="laravel cake shop" />
+
