@@ -1,11 +1,10 @@
 <head>
     <meta name='keywords' content='php, laravel, cake, shop'>
-<title><h1><span style='color:red;'>Laravel</span> Cake Shop Website Project - <span style='color:pink;'>The Sweet Piece</span></h1></title>
 </head>
 
-[comment]: <> (## <span style='color:red;'>Laravel</span> Cake Shop Website Project - <span style='color:pink;'>The Sweet Piece</span>)
+## <span style='color:red;'>Laravel</span> Cake Shop Website Project - <span style='color:pink;'>The Sweet Piece</span>
 
-The Sweet Piece - A Laravel Cake Shop Website Project is an open source ecommerce/online shop platform management system using Laravel.
+The <span style='color:red;'>Sweet</span> Piece - A <span style='color:red;'>Laravel</span> Cake Shop Website Project is an open source ecommerce/online shop platform management system using Laravel.
 
 ## Packages Used
  **Laravel Debugbar came in handy. Set APP_DEBUG=true if usage is helpful, otherwise set false.**
