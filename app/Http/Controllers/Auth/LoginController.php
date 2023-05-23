@@ -100,7 +100,18 @@ class LoginController extends Controller
         $this->validate($request,[
             'name'=>'required',
             'email'=>'required|email|unique:users,email',
-            'phone_number'=>'required',
+            'phone_number' => [
+                'required',
+                function ($attribute, $value, $fail) use ($request) {
+                    $callingCode = $request->input('calling_code');
+                    $phoneNumber = '+88-' . $value;
+                    $exists = User::where('phone_number', $phoneNumber)->exists();
+
+                    if ($exists) {
+                        $fail('The ' . $attribute . ' has already been taken.');
+                    }
+                },
+            ],
             'password'=>'required|min:4|confirmed',
         ]);
 
@@ -108,7 +119,8 @@ class LoginController extends Controller
         $data=[
             'name'=>$request->input('name'),
             'email'=>strtolower(trim($request->input('email'))),
-            'phone_number'=>trim($request->input('phone_number')),
+//            'phone_number'=>trim($request->input('phone_number')),
+            'phone_number'=>'+88'. '-' .trim($request->input('phone_number')),
             'password'=>bcrypt($request->input('password')),
             'email_verification_token'=> uniqid(now('Asia/Dhaka').$request->input('email'),true).Str::random(40)
 
